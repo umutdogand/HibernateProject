@@ -12,6 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+import com.hib.dao.IslemDao;
 import com.hib.dao.UrunDao;
 import com.hib.pojos.Urun;
 import com.toedter.calendar.JDateChooser;
@@ -106,8 +107,9 @@ public class UrunFrame extends JFrame implements ActionListener {
 		u.setAdet(Integer.parseInt(txtAdet.getText()));
 		u.setUrunAdi(txtAdi.getText());
 		u.setUretimTarihi(dateChooser.getDate());
-		
-		UrunDao dao=new UrunDao();
-		dao.Ekle(u);
+		IslemDao i=new IslemDao();
+		i.Ekle(u);
+//		UrunDao dao=new UrunDao();
+//		dao.Ekle(u);
 	}
 }
