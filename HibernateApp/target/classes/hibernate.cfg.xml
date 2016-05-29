@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.password">1234</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@LAB4-100:1521:orcl</property>
+        <property name="hibernate.connection.username">MARKET</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+   		<property name="hibernate.hbm2ddl.auto">create</property>
+   		
+   		<property name="hibernate.show_sql">true</property>
+   		<property name="hibernate.format_sql">true</property>
+   		
+   		<mapping class="com.hib.pojos.Urun"/>
+   		<mapping class="com.hib.pojos.Ders"/>
+   		<mapping class="com.hib.pojos.Egitmen"/>
+   		
+    </session-factory>
+</hibernate-configuration>
